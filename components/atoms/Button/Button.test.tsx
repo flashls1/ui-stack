@@ -31,7 +31,7 @@ describe('Button', () => {
     });
 
     it('shows loading state', () => {
-        render(<Button isLoading>Loading</Button>);
+        render(<Button loading>Loading</Button>);
         // The button should still render with loading prop passed
         expect(screen.getByRole('button')).toBeInTheDocument();
     });

@@ -17,7 +17,7 @@ const meta: Meta<typeof Button> = {
             control: 'select',
             options: ['sm', 'md', 'lg'],
         },
-        isLoading: { control: 'boolean' },
+        loading: { control: 'boolean' },
         disabled: { control: 'boolean' },
     },
 };
@@ -70,7 +70,7 @@ export const Glass: Story = {
 export const Loading: Story = {
     args: {
         children: 'Loading...',
-        isLoading: true,
+        loading: true,
     },
 };
 
