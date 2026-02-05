@@ -1,0 +1,324 @@
+/* ============================================
+   TextReveal Component Styles
+   Animated text reveal effects
+   ============================================ */
+
+/* ========== FADE UP REVEAL ========== */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal__content {
+    display: inline-block;
+}
+
+/* Fade up */
+.text-reveal--fade-up .text-reveal__content {
+    animation: textFadeUp 0.6s var(--ease-out) forwards;
+    opacity: 0;
+}
+
+@keyframes textFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== SLIDE IN ========== */
+.text-reveal--slide-left .text-reveal__content {
+    animation: textSlideLeft 0.6s var(--ease-out) forwards;
+    opacity: 0;
+}
+
+.text-reveal--slide-right .text-reveal__content {
+    animation: textSlideRight 0.6s var(--ease-out) forwards;
+    opacity: 0;
+}
+
+@keyframes textSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes textSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== BLUR REVEAL ========== */
+.text-reveal--blur .text-reveal__content {
+    animation: textBlurIn 0.8s var(--ease-out) forwards;
+    opacity: 0;
+}
+
+@keyframes textBlurIn {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+/* ========== TYPEWRITER ========== */
+.text-reveal--typewriter {
+    display: inline-block;
+}
+
+.text-reveal--typewriter .text-reveal__content {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--primary-bg);
+    animation:
+        typewriter 2s steps(var(--char-count, 20)) forwards,
+        blink 0.7s step-end infinite;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Hide cursor after animation */
+.text-reveal--typewriter.text-reveal--complete .text-reveal__content {
+    border-color: transparent;
+}
+
+/* ========== WORD BY WORD ========== */
+.text-reveal--words .text-reveal__word {
+    display: inline-block;
+    opacity: 0;
+    animation: wordReveal 0.4s var(--ease-out) forwards;
+}
+
+@keyframes wordReveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== CHARACTER BY CHARACTER ========== */
+.text-reveal--chars .text-reveal__char {
+    display: inline-block;
+    opacity: 0;
+    animation: charReveal 0.3s var(--ease-out) forwards;
+}
+
+@keyframes charReveal {
+    from {
+        opacity: 0;
+        transform: translateY(5px) rotateX(-90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+/* ========== GLITCH ========== */
+.text-reveal--glitch .text-reveal__content {
+    position: relative;
+    animation: glitchReveal 0.8s var(--ease-out) forwards;
+}
+
+.text-reveal--glitch .text-reveal__content::before,
+.text-reveal--glitch .text-reveal__content::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.text-reveal--glitch .text-reveal__content::before {
+    color: var(--color-secondary-500);
+    animation: glitchBefore 0.8s var(--ease-out) forwards;
+}
+
+.text-reveal--glitch .text-reveal__content::after {
+    color: var(--color-accent-500);
+    animation: glitchAfter 0.8s var(--ease-out) forwards;
+}
+
+@keyframes glitchReveal {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(-2px);
+    }
+
+    40% {
+        transform: translateX(2px);
+    }
+
+    60% {
+        transform: translateX(-1px);
+    }
+
+    80% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes glitchBefore {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+        transform: translateX(-3px);
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+        transform: translateX(3px);
+    }
+
+    80%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes glitchAfter {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.8;
+        transform: translateX(3px);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.5;
+        transform: translateX(-3px);
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ========== HIGHLIGHT REVEAL ========== */
+.text-reveal--highlight {
+    position: relative;
+}
+
+.text-reveal--highlight::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 30%;
+    background: var(--primary-subtle);
+    z-index: -1;
+    animation: highlightReveal 0.8s var(--ease-out) 0.3s forwards;
+}
+
+.text-reveal--highlight .text-reveal__content {
+    animation: textFadeUp 0.6s var(--ease-out) forwards;
+    opacity: 0;
+}
+
+@keyframes highlightReveal {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* ========== STAGGER DELAYS ========== */
+.text-reveal--stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.text-reveal--stagger-2 {
+    animation-delay: 0.2s;
+}
+
+.text-reveal--stagger-3 {
+    animation-delay: 0.3s;
+}
+
+.text-reveal--stagger-4 {
+    animation-delay: 0.4s;
+}
+
+.text-reveal--stagger-5 {
+    animation-delay: 0.5s;
+}
+
+/* Speed modifiers */
+.text-reveal--fast .text-reveal__content {
+    animation-duration: 0.3s;
+}
+
+.text-reveal--slow .text-reveal__content {
+    animation-duration: 1.2s;
+}

@@ -1,0 +1,127 @@
+/* ============================================
+   Input Component Styles
+   ============================================ */
+
+.input {
+    display: flex;
+    width: 100%;
+    font-family: var(--font-sans);
+    background: var(--input-bg);
+    color: var(--fg-default);
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--duration-150) var(--ease-default);
+}
+
+.input::placeholder {
+    color: var(--input-placeholder);
+}
+
+.input:hover:not(:disabled):not(:focus) {
+    border-color: var(--border-emphasis);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--input-focus-ring);
+    box-shadow: 0 0 0 2px hsla(250, 75%, 56%, 0.2);
+}
+
+.input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--bg-muted);
+}
+
+/* ========== SIZES ========== */
+.input--sm {
+    height: var(--space-8);
+    padding: 0 var(--space-2-5);
+    font-size: var(--text-sm);
+}
+
+.input--md {
+    height: var(--space-10);
+    padding: 0 var(--space-3);
+    font-size: var(--text-sm);
+}
+
+.input--lg {
+    height: var(--space-12);
+    padding: 0 var(--space-4);
+    font-size: var(--text-base);
+}
+
+/* ========== STATES ========== */
+.input--error {
+    border-color: var(--error-bg);
+}
+
+.input--error:focus {
+    border-color: var(--error-bg);
+    box-shadow: 0 0 0 2px hsla(0, 85%, 58%, 0.2);
+}
+
+.input--success {
+    border-color: var(--success-bg);
+}
+
+/* ========== VARIANTS ========== */
+
+/* Glass */
+.input--glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur-lg));
+    -webkit-backdrop-filter: blur(var(--blur-lg));
+    border-color: var(--glass-border);
+}
+
+/* ========== INPUT WITH ICON ========== */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-wrapper .input {
+    width: 100%;
+}
+
+.input-wrapper--icon-left .input {
+    padding-left: var(--space-10);
+}
+
+.input-wrapper--icon-right .input {
+    padding-right: var(--space-10);
+}
+
+.input-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--space-10);
+    height: 100%;
+    color: var(--fg-muted);
+    pointer-events: none;
+}
+
+.input-icon--left {
+    left: 0;
+}
+
+.input-icon--right {
+    right: 0;
+}
+
+/* ========== TEXTAREA ========== */
+.textarea {
+    min-height: 100px;
+    padding: var(--space-3);
+    resize: vertical;
+}
+
+.textarea--no-resize {
+    resize: none;
+}

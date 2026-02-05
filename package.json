@@ -1,0 +1,80 @@
+{
+    "name": "ui-stack",
+    "version": "0.1.0",
+    "description": "A comprehensive UI design system database with modern components, design tokens, and Google Stitch integration for AI-powered layout generation.",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "tokens"
+    ],
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build",
+        "tokens:build": "node tools/build-tokens.js",
+        "lint": "eslint . --ext .ts,.tsx",
+        "test": "vitest",
+        "test:ui": "vitest --ui",
+        "test:coverage": "vitest --coverage",
+        "generate": "node tools/generate-component.js"
+    },
+    "keywords": [
+        "ui",
+        "design-system",
+        "components",
+        "react",
+        "typescript",
+        "design-tokens",
+        "glassmorphism",
+        "google-stitch",
+        "mcp"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^18.3.0",
+        "react-dom": "^18.3.0",
+        "gsap": "^3.12.0",
+        "@gsap/react": "^2.1.0",
+        "motion": "^11.0.0",
+        "ogl": "^1.0.0"
+    },
+    "devDependencies": {
+        "@storybook/addon-essentials": "^8.4.0",
+        "@storybook/addon-interactions": "^8.4.0",
+        "@storybook/addon-links": "^8.4.0",
+        "@storybook/addon-a11y": "^8.4.0",
+        "@storybook/blocks": "^8.4.0",
+        "@storybook/react": "^8.4.0",
+        "@storybook/react-vite": "^8.4.0",
+        "@storybook/test": "^8.4.0",
+        "storybook": "^8.4.0",
+        "@testing-library/react": "^14.0.0",
+        "@testing-library/jest-dom": "^6.0.0",
+        "@testing-library/user-event": "^14.0.0",
+        "@vitest/coverage-v8": "^1.0.0",
+        "@vitest/ui": "^1.0.0",
+        "vitest": "^1.0.0",
+        "jsdom": "^24.0.0",
+        "@types/node": "^20.0.0",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "@vitejs/plugin-react": "^4.0.0",
+        "typescript": "^5.0.0",
+        "vite": "^5.0.0",
+        "eslint": "^8.0.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "eslint-plugin-react": "^7.0.0",
+        "eslint-plugin-react-hooks": "^4.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/flashls1/ui-stack"
+    }
+}

@@ -1,0 +1,228 @@
+{
+    "$description": "Semantic spacing tokens for consistent layouts",
+    "layout": {
+        "$description": "Page-level spacing",
+        "page-padding": {
+            "mobile": {
+                "value": "{spacing.4}",
+                "type": "spacing"
+            },
+            "tablet": {
+                "value": "{spacing.6}",
+                "type": "spacing"
+            },
+            "desktop": {
+                "value": "{spacing.8}",
+                "type": "spacing"
+            }
+        },
+        "section-gap": {
+            "sm": {
+                "value": "{spacing.12}",
+                "type": "spacing"
+            },
+            "md": {
+                "value": "{spacing.16}",
+                "type": "spacing"
+            },
+            "lg": {
+                "value": "{spacing.24}",
+                "type": "spacing"
+            },
+            "xl": {
+                "value": "{spacing.32}",
+                "type": "spacing"
+            }
+        },
+        "container-max": {
+            "sm": {
+                "value": "640px",
+                "type": "sizing"
+            },
+            "md": {
+                "value": "768px",
+                "type": "sizing"
+            },
+            "lg": {
+                "value": "1024px",
+                "type": "sizing"
+            },
+            "xl": {
+                "value": "1280px",
+                "type": "sizing"
+            },
+            "2xl": {
+                "value": "1536px",
+                "type": "sizing"
+            }
+        }
+    },
+    "component": {
+        "$description": "Component-level spacing",
+        "card": {
+            "padding": {
+                "sm": {
+                    "value": "{spacing.3}",
+                    "type": "spacing"
+                },
+                "md": {
+                    "value": "{spacing.4}",
+                    "type": "spacing"
+                },
+                "lg": {
+                    "value": "{spacing.6}",
+                    "type": "spacing"
+                }
+            },
+            "gap": {
+                "sm": {
+                    "value": "{spacing.2}",
+                    "type": "spacing"
+                },
+                "md": {
+                    "value": "{spacing.3}",
+                    "type": "spacing"
+                },
+                "lg": {
+                    "value": "{spacing.4}",
+                    "type": "spacing"
+                }
+            }
+        },
+        "button": {
+            "padding-x": {
+                "sm": {
+                    "value": "{spacing.3}",
+                    "type": "spacing"
+                },
+                "md": {
+                    "value": "{spacing.4}",
+                    "type": "spacing"
+                },
+                "lg": {
+                    "value": "{spacing.6}",
+                    "type": "spacing"
+                }
+            },
+            "padding-y": {
+                "sm": {
+                    "value": "{spacing.1.5}",
+                    "type": "spacing"
+                },
+                "md": {
+                    "value": "{spacing.2}",
+                    "type": "spacing"
+                },
+                "lg": {
+                    "value": "{spacing.3}",
+                    "type": "spacing"
+                }
+            },
+            "gap": {
+                "value": "{spacing.2}",
+                "type": "spacing"
+            }
+        },
+        "input": {
+            "padding-x": {
+                "value": "{spacing.3}",
+                "type": "spacing"
+            },
+            "padding-y": {
+                "value": "{spacing.2}",
+                "type": "spacing"
+            },
+            "gap": {
+                "value": "{spacing.2}",
+                "type": "spacing"
+            }
+        },
+        "form": {
+            "field-gap": {
+                "value": "{spacing.4}",
+                "type": "spacing"
+            },
+            "section-gap": {
+                "value": "{spacing.6}",
+                "type": "spacing"
+            },
+            "label-gap": {
+                "value": "{spacing.1.5}",
+                "type": "spacing"
+            }
+        },
+        "list": {
+            "item-gap": {
+                "sm": {
+                    "value": "{spacing.1}",
+                    "type": "spacing"
+                },
+                "md": {
+                    "value": "{spacing.2}",
+                    "type": "spacing"
+                },
+                "lg": {
+                    "value": "{spacing.3}",
+                    "type": "spacing"
+                }
+            }
+        },
+        "modal": {
+            "padding": {
+                "value": "{spacing.6}",
+                "type": "spacing"
+            },
+            "gap": {
+                "value": "{spacing.4}",
+                "type": "spacing"
+            }
+        },
+        "navbar": {
+            "height": {
+                "value": "{spacing.16}",
+                "type": "sizing"
+            },
+            "padding-x": {
+                "value": "{spacing.4}",
+                "type": "spacing"
+            },
+            "item-gap": {
+                "value": "{spacing.1}",
+                "type": "spacing"
+            }
+        },
+        "sidebar": {
+            "width": {
+                "value": "260px",
+                "type": "sizing"
+            },
+            "width-collapsed": {
+                "value": "72px",
+                "type": "sizing"
+            },
+            "padding": {
+                "value": "{spacing.3}",
+                "type": "spacing"
+            },
+            "item-gap": {
+                "value": "{spacing.1}",
+                "type": "spacing"
+            }
+        }
+    },
+    "text": {
+        "$description": "Text content spacing",
+        "paragraph-gap": {
+            "value": "{spacing.4}",
+            "type": "spacing"
+        },
+        "heading-margin": {
+            "value": "{spacing.6}",
+            "type": "spacing"
+        },
+        "inline-gap": {
+            "value": "{spacing.1}",
+            "type": "spacing"
+        }
+    }
+}

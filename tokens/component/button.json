@@ -1,0 +1,195 @@
+{
+    "$description": "Button component tokens",
+    "button": {
+        "border-radius": {
+            "value": "{borderRadius.lg}",
+            "type": "borderRadius"
+        },
+        "size": {
+            "sm": {
+                "height": {
+                    "value": "{spacing.8}",
+                    "type": "sizing"
+                },
+                "padding-x": {
+                    "value": "{spacing.3}",
+                    "type": "spacing"
+                },
+                "font-size": {
+                    "value": "{fontSize.sm}",
+                    "type": "fontSize"
+                },
+                "icon-size": {
+                    "value": "16px",
+                    "type": "sizing"
+                }
+            },
+            "md": {
+                "height": {
+                    "value": "{spacing.10}",
+                    "type": "sizing"
+                },
+                "padding-x": {
+                    "value": "{spacing.4}",
+                    "type": "spacing"
+                },
+                "font-size": {
+                    "value": "{fontSize.sm}",
+                    "type": "fontSize"
+                },
+                "icon-size": {
+                    "value": "18px",
+                    "type": "sizing"
+                }
+            },
+            "lg": {
+                "height": {
+                    "value": "{spacing.12}",
+                    "type": "sizing"
+                },
+                "padding-x": {
+                    "value": "{spacing.6}",
+                    "type": "spacing"
+                },
+                "font-size": {
+                    "value": "{fontSize.base}",
+                    "type": "fontSize"
+                },
+                "icon-size": {
+                    "value": "20px",
+                    "type": "sizing"
+                }
+            },
+            "xl": {
+                "height": {
+                    "value": "{spacing.14}",
+                    "type": "sizing"
+                },
+                "padding-x": {
+                    "value": "{spacing.8}",
+                    "type": "spacing"
+                },
+                "font-size": {
+                    "value": "{fontSize.lg}",
+                    "type": "fontSize"
+                },
+                "icon-size": {
+                    "value": "24px",
+                    "type": "sizing"
+                }
+            }
+        },
+        "variant": {
+            "primary": {
+                "background": {
+                    "value": "{primary.background}",
+                    "type": "color"
+                },
+                "foreground": {
+                    "value": "{primary.foreground}",
+                    "type": "color"
+                },
+                "hover": {
+                    "value": "{primary.hover}",
+                    "type": "color"
+                },
+                "active": {
+                    "value": "{primary.active}",
+                    "type": "color"
+                },
+                "shadow": {
+                    "value": "{shadow.glow-primary}",
+                    "type": "boxShadow"
+                }
+            },
+            "secondary": {
+                "background": {
+                    "value": "{background.muted}",
+                    "type": "color"
+                },
+                "foreground": {
+                    "value": "{foreground.default}",
+                    "type": "color"
+                },
+                "hover": {
+                    "value": "{background.emphasis}",
+                    "type": "color"
+                },
+                "border": {
+                    "value": "{border.default}",
+                    "type": "color"
+                }
+            },
+            "outline": {
+                "background": {
+                    "value": "transparent",
+                    "type": "color"
+                },
+                "foreground": {
+                    "value": "{primary.background}",
+                    "type": "color"
+                },
+                "border": {
+                    "value": "{primary.background}",
+                    "type": "color"
+                },
+                "hover-background": {
+                    "value": "{primary.subtle}",
+                    "type": "color"
+                }
+            },
+            "ghost": {
+                "background": {
+                    "value": "transparent",
+                    "type": "color"
+                },
+                "foreground": {
+                    "value": "{foreground.default}",
+                    "type": "color"
+                },
+                "hover": {
+                    "value": "{background.muted}",
+                    "type": "color"
+                }
+            },
+            "destructive": {
+                "background": {
+                    "value": "{error.background}",
+                    "type": "color"
+                },
+                "foreground": {
+                    "value": "{error.foreground}",
+                    "type": "color"
+                },
+                "hover": {
+                    "value": "hsl(0, 80%, 45%)",
+                    "type": "color"
+                }
+            },
+            "gradient": {
+                "background": {
+                    "value": "{gradient.primary}",
+                    "type": "gradient"
+                },
+                "foreground": {
+                    "value": "{color.white}",
+                    "type": "color"
+                },
+                "shadow": {
+                    "value": "{shadow.glow-primary}",
+                    "type": "boxShadow"
+                }
+            }
+        },
+        "transition": {
+            "duration": {
+                "value": "{transition.duration.150}",
+                "type": "duration"
+            },
+            "timing": {
+                "value": "{transition.timing.ease}",
+                "type": "timing"
+            }
+        }
+    }
+}

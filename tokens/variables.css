@@ -1,0 +1,425 @@
+/* ============================================
+   UI STACK - Design System CSS Variables
+   Generated from design tokens
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ========== PRIMITIVE COLORS ========== */
+  
+  /* Gray Scale */
+  --color-gray-50: hsl(220, 14%, 96%);
+  --color-gray-100: hsl(220, 13%, 91%);
+  --color-gray-200: hsl(220, 13%, 83%);
+  --color-gray-300: hsl(220, 12%, 71%);
+  --color-gray-400: hsl(220, 11%, 55%);
+  --color-gray-500: hsl(220, 10%, 42%);
+  --color-gray-600: hsl(220, 11%, 34%);
+  --color-gray-700: hsl(220, 13%, 26%);
+  --color-gray-800: hsl(220, 18%, 16%);
+  --color-gray-900: hsl(220, 25%, 10%);
+  --color-gray-950: hsl(220, 35%, 6%);
+  
+  /* Primary - Blue Violet */
+  --color-primary-50: hsl(250, 100%, 97%);
+  --color-primary-100: hsl(250, 95%, 94%);
+  --color-primary-200: hsl(250, 90%, 88%);
+  --color-primary-300: hsl(250, 85%, 78%);
+  --color-primary-400: hsl(250, 80%, 66%);
+  --color-primary-500: hsl(250, 75%, 56%);
+  --color-primary-600: hsl(250, 70%, 48%);
+  --color-primary-700: hsl(250, 65%, 40%);
+  --color-primary-800: hsl(250, 60%, 32%);
+  --color-primary-900: hsl(250, 55%, 24%);
+  --color-primary-950: hsl(250, 50%, 14%);
+  
+  /* Secondary - Cyan */
+  --color-secondary-50: hsl(185, 100%, 97%);
+  --color-secondary-100: hsl(185, 95%, 92%);
+  --color-secondary-200: hsl(185, 90%, 84%);
+  --color-secondary-300: hsl(185, 85%, 72%);
+  --color-secondary-400: hsl(185, 80%, 58%);
+  --color-secondary-500: hsl(185, 75%, 46%);
+  --color-secondary-600: hsl(185, 70%, 38%);
+  --color-secondary-700: hsl(185, 65%, 30%);
+  --color-secondary-800: hsl(185, 60%, 24%);
+  --color-secondary-900: hsl(185, 55%, 18%);
+  --color-secondary-950: hsl(185, 50%, 10%);
+  
+  /* Accent - Pink/Magenta */
+  --color-accent-50: hsl(330, 100%, 97%);
+  --color-accent-100: hsl(330, 95%, 93%);
+  --color-accent-200: hsl(330, 90%, 86%);
+  --color-accent-300: hsl(330, 85%, 76%);
+  --color-accent-400: hsl(330, 80%, 64%);
+  --color-accent-500: hsl(330, 75%, 54%);
+  --color-accent-600: hsl(330, 70%, 46%);
+  --color-accent-700: hsl(330, 65%, 38%);
+  --color-accent-800: hsl(330, 60%, 30%);
+  --color-accent-900: hsl(330, 55%, 22%);
+  --color-accent-950: hsl(330, 50%, 12%);
+  
+  /* Status Colors */
+  --color-success-50: hsl(152, 80%, 96%);
+  --color-success-500: hsl(152, 70%, 42%);
+  --color-success-600: hsl(152, 65%, 36%);
+  --color-success-900: hsl(152, 55%, 18%);
+  
+  --color-warning-50: hsl(42, 100%, 96%);
+  --color-warning-500: hsl(42, 95%, 52%);
+  --color-warning-600: hsl(42, 90%, 44%);
+  --color-warning-900: hsl(42, 75%, 20%);
+  
+  --color-error-50: hsl(0, 90%, 97%);
+  --color-error-500: hsl(0, 85%, 58%);
+  --color-error-600: hsl(0, 80%, 50%);
+  --color-error-900: hsl(0, 70%, 22%);
+  
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  
+  /* ========== GRADIENTS ========== */
+  --gradient-primary: linear-gradient(135deg, hsl(250, 75%, 56%) 0%, hsl(280, 70%, 52%) 50%, hsl(330, 75%, 54%) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(185, 75%, 46%) 0%, hsl(200, 80%, 50%) 100%);
+  --gradient-glow: radial-gradient(circle at center, hsla(250, 75%, 56%, 0.4) 0%, transparent 70%);
+  --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.1) 0%, hsla(0, 0%, 100%, 0.05) 100%);
+  --gradient-dark-glass: linear-gradient(135deg, hsla(220, 25%, 10%, 0.8) 0%, hsla(220, 35%, 6%, 0.9) 100%);
+  
+  /* ========== TYPOGRAPHY ========== */
+  --font-sans: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  --font-display: 'Outfit', 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* ========== SPACING ========== */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem;
+  --space-1: 0.25rem;
+  --space-1-5: 0.375rem;
+  --space-2: 0.5rem;
+  --space-2-5: 0.625rem;
+  --space-3: 0.75rem;
+  --space-3-5: 0.875rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-9: 2.25rem;
+  --space-10: 2.5rem;
+  --space-11: 2.75rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  
+  /* ========== BORDERS ========== */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* ========== SHADOWS ========== */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-2xl: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  
+  /* Glow Shadows */
+  --shadow-glow-primary: 0 0 20px hsla(250, 75%, 56%, 0.4), 0 0 40px hsla(250, 75%, 56%, 0.2);
+  --shadow-glow-secondary: 0 0 20px hsla(185, 75%, 46%, 0.4), 0 0 40px hsla(185, 75%, 46%, 0.2);
+  --shadow-glow-accent: 0 0 20px hsla(330, 75%, 54%, 0.4), 0 0 40px hsla(330, 75%, 54%, 0.2);
+  
+  /* ========== BLUR ========== */
+  --blur-none: 0;
+  --blur-sm: 4px;
+  --blur-base: 8px;
+  --blur-md: 12px;
+  --blur-lg: 16px;
+  --blur-xl: 24px;
+  --blur-2xl: 40px;
+  --blur-3xl: 64px;
+  
+  /* ========== TRANSITIONS ========== */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* ========== Z-INDEX ========== */
+  --z-behind: -1;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+  --z-toast: 700;
+  --z-max: 9999;
+  
+  /* ========== SEMANTIC TOKENS (Light Mode) ========== */
+  --bg-default: var(--color-white);
+  --bg-subtle: var(--color-gray-50);
+  --bg-muted: var(--color-gray-100);
+  --bg-emphasis: var(--color-gray-200);
+  --bg-inverse: var(--color-gray-900);
+  
+  --fg-default: var(--color-gray-900);
+  --fg-muted: var(--color-gray-500);
+  --fg-subtle: var(--color-gray-400);
+  --fg-inverse: var(--color-white);
+  
+  --border-default: var(--color-gray-200);
+  --border-muted: var(--color-gray-100);
+  --border-emphasis: var(--color-gray-300);
+  
+  --primary-bg: var(--color-primary-500);
+  --primary-fg: var(--color-white);
+  --primary-hover: var(--color-primary-600);
+  --primary-active: var(--color-primary-700);
+  --primary-subtle: var(--color-primary-50);
+  --primary-subtle-fg: var(--color-primary-700);
+  
+  --secondary-bg: var(--color-secondary-500);
+  --secondary-fg: var(--color-white);
+  --secondary-hover: var(--color-secondary-600);
+  --secondary-subtle: var(--color-secondary-50);
+  
+  --accent-bg: var(--color-accent-500);
+  --accent-fg: var(--color-white);
+  --accent-hover: var(--color-accent-600);
+  --accent-subtle: var(--color-accent-50);
+  
+  --success-bg: var(--color-success-500);
+  --success-fg: var(--color-white);
+  --success-subtle: var(--color-success-50);
+  
+  --warning-bg: var(--color-warning-500);
+  --warning-fg: var(--color-gray-900);
+  --warning-subtle: var(--color-warning-50);
+  
+  --error-bg: var(--color-error-500);
+  --error-fg: var(--color-white);
+  --error-subtle: var(--color-error-50);
+  
+  --card-bg: var(--color-white);
+  --card-border: var(--color-gray-200);
+  
+  --input-bg: var(--color-white);
+  --input-border: var(--color-gray-300);
+  --input-placeholder: var(--color-gray-400);
+  --input-focus-ring: var(--color-primary-500);
+  
+  --glass-bg: hsla(0, 0%, 100%, 0.7);
+  --glass-border: hsla(0, 0%, 100%, 0.3);
+}
+
+/* ========== DARK MODE ========== */
+.dark,
+[data-theme="dark"] {
+  --bg-default: var(--color-gray-950);
+  --bg-subtle: var(--color-gray-900);
+  --bg-muted: var(--color-gray-800);
+  --bg-emphasis: var(--color-gray-700);
+  --bg-inverse: var(--color-gray-50);
+  
+  --fg-default: var(--color-gray-50);
+  --fg-muted: var(--color-gray-400);
+  --fg-subtle: var(--color-gray-500);
+  --fg-inverse: var(--color-gray-900);
+  
+  --border-default: var(--color-gray-800);
+  --border-muted: var(--color-gray-900);
+  --border-emphasis: var(--color-gray-700);
+  
+  --primary-hover: var(--color-primary-400);
+  --primary-active: var(--color-primary-300);
+  --primary-subtle: var(--color-primary-950);
+  --primary-subtle-fg: var(--color-primary-300);
+  
+  --secondary-hover: var(--color-secondary-400);
+  --secondary-subtle: var(--color-secondary-950);
+  
+  --accent-hover: var(--color-accent-400);
+  --accent-subtle: var(--color-accent-950);
+  
+  --success-subtle: var(--color-success-900);
+  --warning-subtle: var(--color-warning-900);
+  --error-subtle: var(--color-error-900);
+  
+  --card-bg: var(--color-gray-900);
+  --card-border: var(--color-gray-800);
+  
+  --input-bg: var(--color-gray-900);
+  --input-border: var(--color-gray-700);
+  --input-placeholder: var(--color-gray-500);
+  
+  --glass-bg: hsla(220, 25%, 10%, 0.7);
+  --glass-border: hsla(220, 20%, 30%, 0.3);
+}
+
+/* ========== KEYFRAME ANIMATIONS ========== */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: var(--shadow-glow-primary);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 30px hsla(250, 75%, 56%, 0.6), 0 0 60px hsla(250, 75%, 56%, 0.3);
+    opacity: 0.8;
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========== BASE STYLES ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-default);
+  color: var(--fg-default);
+  min-height: 100vh;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--primary-bg);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary-subtle);
+  color: var(--primary-subtle-fg);
+}

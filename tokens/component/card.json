@@ -1,0 +1,127 @@
+{
+    "$description": "Card component tokens",
+    "card": {
+        "border-radius": {
+            "value": "{borderRadius.xl}",
+            "type": "borderRadius"
+        },
+        "border-width": {
+            "value": "{borderWidth.default}",
+            "type": "borderWidth"
+        },
+        "variant": {
+            "default": {
+                "background": {
+                    "value": "{card.background}",
+                    "type": "color"
+                },
+                "border": {
+                    "value": "{card.border}",
+                    "type": "color"
+                },
+                "shadow": {
+                    "value": "{shadow.sm}",
+                    "type": "boxShadow"
+                }
+            },
+            "elevated": {
+                "background": {
+                    "value": "{card.background}",
+                    "type": "color"
+                },
+                "border": {
+                    "value": "transparent",
+                    "type": "color"
+                },
+                "shadow": {
+                    "value": "{shadow.lg}",
+                    "type": "boxShadow"
+                }
+            },
+            "glass": {
+                "background": {
+                    "value": "{glass.background}",
+                    "type": "color"
+                },
+                "border": {
+                    "value": "{glass.border}",
+                    "type": "color"
+                },
+                "backdrop-blur": {
+                    "value": "{blur.xl}",
+                    "type": "blur"
+                },
+                "shadow": {
+                    "value": "{shadow.lg}",
+                    "type": "boxShadow"
+                }
+            },
+            "gradient": {
+                "background": {
+                    "value": "{gradient.dark-glass}",
+                    "type": "gradient"
+                },
+                "border": {
+                    "value": "{glass.border}",
+                    "type": "color"
+                },
+                "backdrop-blur": {
+                    "value": "{blur.lg}",
+                    "type": "blur"
+                }
+            },
+            "glow": {
+                "background": {
+                    "value": "{card.background}",
+                    "type": "color"
+                },
+                "border": {
+                    "value": "{primary.background}",
+                    "type": "color"
+                },
+                "shadow": {
+                    "value": "{shadow.glow-primary}",
+                    "type": "boxShadow"
+                }
+            }
+        },
+        "padding": {
+            "sm": {
+                "value": "{spacing.3}",
+                "type": "spacing"
+            },
+            "md": {
+                "value": "{spacing.4}",
+                "type": "spacing"
+            },
+            "lg": {
+                "value": "{spacing.6}",
+                "type": "spacing"
+            },
+            "xl": {
+                "value": "{spacing.8}",
+                "type": "spacing"
+            }
+        },
+        "transition": {
+            "duration": {
+                "value": "{transition.duration.200}",
+                "type": "duration"
+            },
+            "timing": {
+                "value": "{transition.timing.ease}",
+                "type": "timing"
+            }
+        },
+        "hover": {
+            "transform": {
+                "value": "translateY(-4px)",
+                "type": "transform"
+            },
+            "shadow": {
+                "value": "{shadow.xl}",
+                "type": "boxShadow"
+            }
+        }
+    }
+}

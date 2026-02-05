@@ -1,0 +1,100 @@
+/* ============================================
+   GradientText Component Styles
+   Animated gradient text effect
+   ============================================ */
+
+.gradient-text {
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animated gradient */
+.gradient-text--animated {
+    animation: gradient-shift 5s ease infinite;
+}
+
+/* Faster animation */
+.gradient-text--fast {
+    animation: gradient-shift 2s ease infinite;
+}
+
+/* Color variants */
+.gradient-text--primary {
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+}
+
+.gradient-text--secondary {
+    background: var(--gradient-secondary);
+    background-size: 200% 200%;
+}
+
+.gradient-text--rainbow {
+    background: linear-gradient(90deg,
+            hsl(0, 85%, 60%),
+            hsl(45, 90%, 55%),
+            hsl(120, 70%, 50%),
+            hsl(185, 75%, 46%),
+            hsl(250, 75%, 56%),
+            hsl(330, 75%, 54%),
+            hsl(0, 85%, 60%));
+    background-size: 300% 100%;
+}
+
+.gradient-text--gold {
+    background: linear-gradient(135deg,
+            hsl(40, 80%, 55%) 0%,
+            hsl(45, 95%, 65%) 50%,
+            hsl(35, 75%, 50%) 100%);
+    background-size: 200% 200%;
+}
+
+/* Glow effect on text */
+.gradient-text--glow {
+    text-shadow:
+        0 0 20px hsla(250, 75%, 56%, 0.5),
+        0 0 40px hsla(280, 70%, 52%, 0.3),
+        0 0 60px hsla(330, 75%, 54%, 0.2);
+}
+
+/* Shimmer effect */
+.gradient-text--shimmer {
+    background: linear-gradient(90deg,
+            var(--fg-default) 0%,
+            var(--color-primary-400) 25%,
+            var(--fg-default) 50%,
+            var(--color-primary-400) 75%,
+            var(--fg-default) 100%);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: -100% 50%;
+    }
+}

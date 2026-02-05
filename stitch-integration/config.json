@@ -1,0 +1,23 @@
+{
+    "$schema": "https://modelcontextprotocol.io/schemas/mcp-config.json",
+    "mcpServers": {
+        "stitch": {
+            "serverUrl": "https://stitch.googleapis.com/mcp",
+            "headers": {
+                "X-Goog-Api-Key": "AQ.Ab8RN6LYXo4s2yvP8vb1fI5d9i9IvNRW54nH3nsPS2G7jgEJNQ"
+            }
+        }
+    },
+    "designContext": {
+        "tokenPath": "../tokens",
+        "componentPath": "../components",
+        "injectTokens": true,
+        "defaultTheme": "dark",
+        "stylePreferences": {
+            "aesthetic": "modern-glassmorphism",
+            "colorScheme": "vibrant-gradient",
+            "animations": true,
+            "accessibility": "WCAG-AA"
+        }
+    }
+}

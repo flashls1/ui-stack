@@ -1,0 +1,186 @@
+/* ============================================
+   Badge Component Styles
+   ============================================ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    white-space: nowrap;
+    border-radius: var(--radius-full);
+    transition: all var(--duration-150) var(--ease-default);
+}
+
+/* ========== SIZES ========== */
+.badge--sm {
+    height: 20px;
+    padding: 0 var(--space-2);
+    font-size: 11px;
+}
+
+.badge--md {
+    height: 24px;
+    padding: 0 var(--space-2-5);
+    font-size: var(--text-xs);
+}
+
+.badge--lg {
+    height: 28px;
+    padding: 0 var(--space-3);
+    font-size: var(--text-sm);
+}
+
+/* ========== VARIANTS ========== */
+
+/* Default / Gray */
+.badge--default {
+    background: var(--bg-muted);
+    color: var(--fg-default);
+}
+
+/* Primary */
+.badge--primary {
+    background: var(--primary-subtle);
+    color: var(--primary-subtle-fg);
+}
+
+.badge--primary-solid {
+    background: var(--primary-bg);
+    color: var(--primary-fg);
+}
+
+/* Secondary */
+.badge--secondary {
+    background: var(--secondary-subtle);
+    color: var(--color-secondary-700);
+}
+
+.dark .badge--secondary,
+[data-theme="dark"] .badge--secondary {
+    color: var(--color-secondary-300);
+}
+
+/* Accent */
+.badge--accent {
+    background: var(--accent-subtle);
+    color: var(--color-accent-700);
+}
+
+.dark .badge--accent,
+[data-theme="dark"] .badge--accent {
+    color: var(--color-accent-300);
+}
+
+/* Success */
+.badge--success {
+    background: var(--success-subtle);
+    color: var(--color-success-600);
+}
+
+.dark .badge--success,
+[data-theme="dark"] .badge--success {
+    color: var(--color-success-500);
+}
+
+/* Warning */
+.badge--warning {
+    background: var(--warning-subtle);
+    color: var(--color-warning-600);
+}
+
+.dark .badge--warning,
+[data-theme="dark"] .badge--warning {
+    color: var(--color-warning-500);
+}
+
+/* Error */
+.badge--error {
+    background: var(--error-subtle);
+    color: var(--color-error-600);
+}
+
+.dark .badge--error,
+[data-theme="dark"] .badge--error {
+    color: var(--color-error-500);
+}
+
+/* ========== SPECIAL VARIANTS ========== */
+
+/* Gradient */
+.badge--gradient {
+    background: var(--gradient-primary);
+    color: var(--color-white);
+}
+
+/* Outline */
+.badge--outline {
+    background: transparent;
+    border: 1px solid var(--border-default);
+    color: var(--fg-default);
+}
+
+.badge--outline-primary {
+    background: transparent;
+    border: 1px solid var(--primary-bg);
+    color: var(--primary-bg);
+}
+
+/* Glow */
+.badge--glow {
+    background: var(--primary-bg);
+    color: var(--primary-fg);
+    box-shadow: var(--shadow-glow-primary);
+}
+
+/* ========== DOT INDICATOR ========== */
+.badge--dot::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: currentColor;
+}
+
+/* ========== PILL (non-rounded) ========== */
+.badge--pill {
+    border-radius: var(--radius-md);
+}
+
+/* ========== INTERACTIVE ========== */
+.badge--interactive {
+    cursor: pointer;
+}
+
+.badge--interactive:hover {
+    opacity: 0.8;
+}
+
+/* ========== WITH ICON ========== */
+.badge__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge--sm .badge__icon {
+    width: 12px;
+    height: 12px;
+}
+
+.badge--md .badge__icon {
+    width: 14px;
+    height: 14px;
+}
+
+.badge--lg .badge__icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* ========== ANIMATED PULSE ========== */
+.badge--pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

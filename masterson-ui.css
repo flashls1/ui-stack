@@ -1,0 +1,614 @@
+/* Masterson UI - Device Preview Layout */
+
+:root {
+    --masterson-blue: #0077B6;
+    --masterson-blue-dark: #005a8c;
+    --masterson-orange: #F5A623;
+    --masterson-orange-dark: #d48c0f;
+
+    --app-bg: #0a0a0f;
+    --app-surface: #12121a;
+    --app-surface-elevated: #1a1a25;
+    --app-border: rgba(255, 255, 255, 0.1);
+    --app-text: #f0f0f0;
+    --app-text-muted: #888;
+
+    --panel-width: 320px;
+    --header-height: 60px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--app-bg);
+    color: var(--app-text);
+    overflow: hidden;
+}
+
+.masterson-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Floating Header - Centered over preview area */
+.floating-header {
+    position: fixed;
+    top: 12px;
+    /* Center over preview area: account for panel width (320px) */
+    left: calc(var(--panel-width) + ((100% - var(--panel-width)) / 2));
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(18, 18, 26, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--app-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    width: calc(100% - var(--panel-width) - 60px);
+    max-width: 1200px;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* When panel is closed, center normally */
+.floating-header.panel-closed {
+    left: 50%;
+    width: calc(100% - 40px);
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, var(--masterson-blue), var(--masterson-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Device Selector */
+.device-selector {
+    display: flex;
+    background: var(--app-surface-elevated);
+    border-radius: 10px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.device-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.35rem 0.6rem;
+    border: none;
+    background: transparent;
+    color: var(--app-text-muted);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 70px;
+}
+
+.device-btn:hover {
+    color: var(--app-text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.device-btn.active {
+    background: linear-gradient(135deg, var(--masterson-blue), var(--masterson-orange));
+    color: white;
+}
+
+.device-icon {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.device-name {
+    font-size: 0.6rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+
+.device-dims {
+    font-size: 0.5rem;
+    opacity: 0.7;
+}
+
+.device-btn.active .device-dims {
+    opacity: 0.9;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    background: var(--app-surface-elevated);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.lang-btn {
+    padding: 0.35rem 0.5rem;
+    border: none;
+    background: transparent;
+    color: var(--app-text-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    color: var(--app-text);
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, var(--masterson-blue), var(--masterson-orange));
+    color: white;
+}
+
+.export-btn {
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--app-border);
+    background: transparent;
+    color: var(--app-text-muted);
+    font-size: 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.export-btn:hover {
+    border-color: var(--masterson-blue);
+    color: var(--app-text);
+}
+
+/* Main Layout */
+.main-layout {
+    flex: 1;
+    display: flex;
+    padding-top: calc(var(--header-height) + 20px);
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Side Panel */
+.side-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--panel-width);
+    background: var(--app-surface);
+    border-right: 1px solid var(--app-border);
+    z-index: 90;
+    transition: transform 0.3s ease;
+}
+
+.side-panel.closed {
+    transform: translateX(-100%);
+}
+
+.panel-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.25rem;
+    padding-top: calc(var(--header-height) + 30px);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.panel-header h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.panel-close {
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: var(--app-surface-elevated);
+    color: var(--app-text-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8rem;
+}
+
+.panel-close:hover {
+    background: rgba(255, 100, 100, 0.2);
+    color: #ff6b6b;
+}
+
+.prompt-input {
+    flex: 1;
+    width: 100%;
+    padding: 0.875rem;
+    background: var(--app-surface-elevated);
+    border: 1px solid var(--app-border);
+    border-radius: 10px;
+    color: var(--app-text);
+    font-size: 0.85rem;
+    font-family: inherit;
+    resize: none;
+    line-height: 1.5;
+}
+
+.prompt-input:focus {
+    outline: none;
+    border-color: var(--masterson-blue);
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+}
+
+.prompt-input::placeholder {
+    color: var(--app-text-muted);
+}
+
+.panel-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.875rem;
+}
+
+.btn-clear,
+.btn-generate {
+    flex: 1;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-clear {
+    background: var(--app-surface-elevated);
+    color: var(--app-text-muted);
+    border: 1px solid var(--app-border);
+}
+
+.btn-generate {
+    background: linear-gradient(135deg, var(--masterson-blue), var(--masterson-orange));
+    color: white;
+}
+
+.btn-generate:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 119, 182, 0.4);
+}
+
+.btn-clear:disabled,
+.btn-generate:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Panel Toggle */
+.panel-toggle {
+    position: fixed;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 80;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--app-border);
+    background: var(--app-surface);
+    color: var(--app-text);
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.panel-toggle:hover {
+    background: var(--app-surface-elevated);
+    border-color: var(--masterson-blue);
+}
+
+/* Preview Area */
+.preview-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: margin-left 0.3s ease;
+    gap: 1rem;
+}
+
+.preview-area.with-panel {
+    margin-left: var(--panel-width);
+}
+
+/* Device Frame Base */
+.device-frame {
+    position: relative;
+    width: var(--device-width);
+    height: var(--device-height);
+    max-width: 90%;
+    max-height: calc(100vh - 180px);
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 100px rgba(0, 119, 182, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phone Frames */
+.device-frame.device-phone-large,
+.device-frame.device-phone-small {
+    border-radius: 40px;
+    border: 6px solid #222;
+    box-shadow:
+        0 0 0 1px #444,
+        0 0 0 4px #111,
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        inset 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.device-frame.device-phone-small {
+    border-radius: 32px;
+    border-width: 5px;
+}
+
+/* Phone Notch */
+.device-notch {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 120px;
+    height: 28px;
+    background: #000;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.device-phone-small .device-notch {
+    width: 60px;
+    height: 20px;
+    border-radius: 0 0 12px 12px;
+    top: 6px;
+}
+
+.notch-inner {
+    width: 8px;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 50%;
+}
+
+/* Phone Home Indicator */
+.device-home-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.device-phone-small .device-home-indicator {
+    width: 80px;
+    bottom: 6px;
+}
+
+/* Desktop Frame */
+.device-frame.device-desktop {
+    border-radius: 8px;
+    border: 2px solid #333;
+    box-shadow:
+        0 0 0 1px #444,
+        0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Device Screen */
+.device-screen {
+    flex: 1;
+    background: var(--app-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Device Label */
+.device-label {
+    text-align: center;
+    color: var(--app-text-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.label-dims {
+    display: block;
+    font-size: 0.65rem;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+}
+
+.empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.empty-state h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--masterson-blue), var(--masterson-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.empty-state p {
+    color: var(--app-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.btn-start {
+    padding: 0.6rem 1.25rem;
+    background: linear-gradient(135deg, var(--masterson-blue), var(--masterson-orange));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 119, 182, 0.4);
+}
+
+/* Generated Content */
+.generated-content {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.mock-preview {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.05), rgba(245, 166, 35, 0.05));
+    border: 1px dashed var(--app-border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.mock-label {
+    font-size: 1rem;
+}
+
+.mock-prompt {
+    color: var(--app-text-muted);
+    font-style: italic;
+    max-width: 90%;
+    font-size: 0.85rem;
+}
+
+.mock-device {
+    font-size: 0.7rem;
+    color: var(--app-text-muted);
+    opacity: 0.7;
+}
+
+.mock-device span {
+    font-size: 0.6rem;
+}
+
+/* Mini Footer */
+.mini-footer {
+    position: fixed;
+    bottom: 6px;
+    right: 12px;
+    font-size: 0.6rem;
+    color: var(--app-text-muted);
+    opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .floating-header {
+        left: 0.75rem;
+        right: 0.75rem;
+        transform: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .device-selector {
+        order: 10;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .side-panel {
+        width: 100%;
+    }
+
+    .preview-area.with-panel {
+        margin-left: 0;
+        display: none;
+    }
+}

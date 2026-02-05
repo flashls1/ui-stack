@@ -1,0 +1,59 @@
+/* ShinyText Component Styles */
+
+.shiny-text {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: var(--bg-color);
+}
+
+.shiny-text__shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            transparent 40%,
+            var(--shine-color) 50%,
+            transparent 60%,
+            transparent 100%);
+    background-size: 200% 100%;
+    animation: shiny-text-sweep var(--shine-duration) infinite linear;
+    pointer-events: none;
+}
+
+@keyframes shiny-text-sweep {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.shiny-text--disabled .shiny-text__shine {
+    animation: none;
+    opacity: 0;
+}
+
+/* Gradient text variant for even more impact */
+.shiny-text--gradient {
+    background: linear-gradient(90deg,
+            var(--color-primary-500),
+            var(--color-secondary-500),
+            var(--color-accent-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shiny-text--gradient .shiny-text__shine {
+    background: linear-gradient(120deg,
+            transparent 0%,
+            transparent 35%,
+            rgba(255, 255, 255, 0.6) 50%,
+            transparent 65%,
+            transparent 100%);
+    background-size: 200% 100%;
+    mix-blend-mode: overlay;
+}

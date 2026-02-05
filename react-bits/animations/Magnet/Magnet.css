@@ -1,0 +1,33 @@
+/* Magnet Component Styles */
+
+.magnet {
+    display: inline-block;
+    padding: var(--magnet-padding, 40px);
+    margin: calc(-1 * var(--magnet-padding, 40px));
+    cursor: pointer;
+}
+
+.magnet__content {
+    transform: translate(var(--magnet-x, 0), var(--magnet-y, 0));
+    transition: transform var(--magnet-duration, 300ms) cubic-bezier(0.33, 1, 0.68, 1);
+    will-change: transform;
+}
+
+.magnet--disabled {
+    cursor: default;
+}
+
+.magnet--disabled .magnet__content {
+    transform: none !important;
+    transition: none;
+}
+
+/* Scale effect on hover */
+.magnet--scale .magnet__content {
+    transition: transform var(--magnet-duration, 300ms) cubic-bezier(0.33, 1, 0.68, 1),
+        scale var(--magnet-duration, 300ms) ease;
+}
+
+.magnet--scale.magnet--active .magnet__content {
+    scale: 1.05;
+}

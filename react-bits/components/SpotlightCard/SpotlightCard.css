@@ -1,0 +1,71 @@
+/* SpotlightCard Component Styles */
+
+.spotlight-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-color);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s ease;
+}
+
+.spotlight-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.spotlight-card__spotlight {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: radial-gradient(circle var(--spotlight-size) at var(--spotlight-x) var(--spotlight-y),
+            var(--spotlight-color),
+            transparent 100%);
+}
+
+.spotlight-card--hovering .spotlight-card__spotlight {
+    opacity: 1;
+}
+
+.spotlight-card__content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+/* Preset variants */
+.spotlight-card--primary {
+    --spotlight-color: rgba(120, 119, 198, 0.4);
+}
+
+.spotlight-card--secondary {
+    --spotlight-color: rgba(0, 212, 255, 0.3);
+}
+
+.spotlight-card--accent {
+    --spotlight-color: rgba(255, 107, 157, 0.3);
+}
+
+.spotlight-card--success {
+    --spotlight-color: rgba(16, 185, 129, 0.3);
+}
+
+/* Border glow on hover */
+.spotlight-card--glow::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(var(--border-radius) + 2px);
+    background: radial-gradient(circle var(--spotlight-size) at var(--spotlight-x) var(--spotlight-y),
+            var(--spotlight-color),
+            transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.spotlight-card--glow:hover::after {
+    opacity: 0.6;
+}

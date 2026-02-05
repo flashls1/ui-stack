@@ -1,0 +1,285 @@
+/* ============================================
+   Card Component Styles
+   ============================================ */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-xl);
+    transition: all var(--duration-200) var(--ease-default);
+    overflow: hidden;
+}
+
+/* ========== VARIANTS ========== */
+
+/* Default */
+.card--default {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Elevated */
+.card--elevated {
+    background: var(--card-bg);
+    border: none;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Glass - Glassmorphism effect */
+.card--glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur-xl));
+    -webkit-backdrop-filter: blur(var(--blur-xl));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Gradient */
+.card--gradient {
+    background: var(--gradient-dark-glass);
+    backdrop-filter: blur(var(--blur-lg));
+    -webkit-backdrop-filter: blur(var(--blur-lg));
+    border: 1px solid var(--glass-border);
+}
+
+/* Glow */
+.card--glow {
+    background: var(--card-bg);
+    border: 1px solid var(--primary-bg);
+    box-shadow: var(--shadow-glow-primary);
+}
+
+/* Outline */
+.card--outline {
+    background: transparent;
+    border: 1px solid var(--border-default);
+}
+
+/* Filled */
+.card--filled {
+    background: var(--bg-subtle);
+    border: none;
+}
+
+/* ========== PADDING ========== */
+.card--padding-none {
+    padding: 0;
+}
+
+.card--padding-sm {
+    padding: var(--space-3);
+}
+
+.card--padding-md {
+    padding: var(--space-4);
+}
+
+.card--padding-lg {
+    padding: var(--space-6);
+}
+
+.card--padding-xl {
+    padding: var(--space-8);
+}
+
+/* ========== HOVER EFFECTS ========== */
+.card--hoverable {
+    cursor: pointer;
+}
+
+.card--hoverable:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card--glow.card--hoverable:hover {
+    box-shadow: 0 0 30px hsla(250, 75%, 56%, 0.5), 0 0 60px hsla(250, 75%, 56%, 0.25);
+}
+
+/* ========== CARD SECTIONS ========== */
+.card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border-default);
+}
+
+.card--glass .card__header,
+.card--gradient .card__header {
+    border-bottom-color: var(--glass-border);
+}
+
+.card__header-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.card__title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--fg-default);
+    line-height: var(--leading-tight);
+}
+
+.card__description {
+    font-size: var(--text-sm);
+    color: var(--fg-muted);
+    line-height: var(--leading-normal);
+}
+
+.card__body {
+    flex: 1;
+    padding: var(--space-4);
+}
+
+/* Remove padding if card already has padding */
+.card--padding-sm .card__body,
+.card--padding-md .card__body,
+.card--padding-lg .card__body,
+.card--padding-xl .card__body {
+    padding: 0;
+    padding-top: var(--space-4);
+}
+
+.card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border-top: 1px solid var(--border-default);
+}
+
+.card--glass .card__footer,
+.card--gradient .card__footer {
+    border-top-color: var(--glass-border);
+}
+
+/* ========== CARD IMAGE ========== */
+.card__image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__image--top {
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.card__image--ratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.card__image--ratio-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.card__image--ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+/* Image overlay for gradient effect */
+.card__image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.6) 0%, transparent 50%);
+}
+
+/* ========== SPECIAL CARDS ========== */
+
+/* Spotlight effect on hover */
+.card--spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.card--spotlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            hsla(250, 75%, 56%, 0.15),
+            transparent 40%);
+    opacity: 0;
+    transition: opacity var(--duration-300) var(--ease-default);
+    pointer-events: none;
+}
+
+.card--spotlight:hover::before {
+    opacity: 1;
+}
+
+/* Animated border gradient */
+.card--border-gradient {
+    position: relative;
+    background: var(--card-bg);
+    border: none;
+}
+
+.card--border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: var(--radius-xl);
+    background: var(--gradient-primary);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* ========== CARD GRID ========== */
+.card-grid {
+    display: grid;
+    gap: var(--space-6);
+}
+
+.card-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .card-grid--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grid--3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .card-grid--4,
+    .card-grid--3,
+    .card-grid--2 {
+        grid-template-columns: 1fr;
+    }
+}

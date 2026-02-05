@@ -1,0 +1,245 @@
+{
+    "shadow": {
+        "$description": "Shadow scale for depth and elevation",
+        "xs": {
+            "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+            "type": "boxShadow"
+        },
+        "sm": {
+            "value": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
+            "type": "boxShadow"
+        },
+        "base": {
+            "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)",
+            "type": "boxShadow"
+        },
+        "md": {
+            "value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
+            "type": "boxShadow"
+        },
+        "lg": {
+            "value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+            "type": "boxShadow"
+        },
+        "xl": {
+            "value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+            "type": "boxShadow"
+        },
+        "2xl": {
+            "value": "0 25px 60px -15px rgba(0, 0, 0, 0.35)",
+            "type": "boxShadow"
+        },
+        "inner": {
+            "value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)",
+            "type": "boxShadow"
+        },
+        "none": {
+            "value": "none",
+            "type": "boxShadow"
+        },
+        "glow-primary": {
+            "$description": "Glow effect for primary elements",
+            "value": "0 0 20px hsla(250, 75%, 56%, 0.4), 0 0 40px hsla(250, 75%, 56%, 0.2)",
+            "type": "boxShadow"
+        },
+        "glow-secondary": {
+            "value": "0 0 20px hsla(185, 75%, 46%, 0.4), 0 0 40px hsla(185, 75%, 46%, 0.2)",
+            "type": "boxShadow"
+        },
+        "glow-accent": {
+            "value": "0 0 20px hsla(330, 75%, 54%, 0.4), 0 0 40px hsla(330, 75%, 54%, 0.2)",
+            "type": "boxShadow"
+        }
+    },
+    "blur": {
+        "$description": "Blur values for glassmorphism effects",
+        "none": {
+            "value": "0",
+            "type": "blur"
+        },
+        "sm": {
+            "value": "4px",
+            "type": "blur"
+        },
+        "base": {
+            "value": "8px",
+            "type": "blur"
+        },
+        "md": {
+            "value": "12px",
+            "type": "blur"
+        },
+        "lg": {
+            "value": "16px",
+            "type": "blur"
+        },
+        "xl": {
+            "value": "24px",
+            "type": "blur"
+        },
+        "2xl": {
+            "value": "40px",
+            "type": "blur"
+        },
+        "3xl": {
+            "value": "64px",
+            "type": "blur"
+        }
+    },
+    "transition": {
+        "$description": "Transition timing functions and durations",
+        "duration": {
+            "75": {
+                "value": "75ms",
+                "type": "duration"
+            },
+            "100": {
+                "value": "100ms",
+                "type": "duration"
+            },
+            "150": {
+                "value": "150ms",
+                "type": "duration"
+            },
+            "200": {
+                "value": "200ms",
+                "type": "duration"
+            },
+            "300": {
+                "value": "300ms",
+                "type": "duration"
+            },
+            "500": {
+                "value": "500ms",
+                "type": "duration"
+            },
+            "700": {
+                "value": "700ms",
+                "type": "duration"
+            },
+            "1000": {
+                "value": "1000ms",
+                "type": "duration"
+            }
+        },
+        "timing": {
+            "ease": {
+                "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "type": "timing"
+            },
+            "ease-in": {
+                "value": "cubic-bezier(0.4, 0, 1, 1)",
+                "type": "timing"
+            },
+            "ease-out": {
+                "value": "cubic-bezier(0, 0, 0.2, 1)",
+                "type": "timing"
+            },
+            "ease-in-out": {
+                "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "type": "timing"
+            },
+            "spring": {
+                "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+                "type": "timing",
+                "comment": "Bouncy spring effect"
+            },
+            "bounce": {
+                "value": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+                "type": "timing"
+            }
+        }
+    },
+    "animation": {
+        "$description": "Keyframe animation definitions",
+        "spin": {
+            "value": "spin 1s linear infinite",
+            "type": "animation"
+        },
+        "ping": {
+            "value": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+            "type": "animation"
+        },
+        "pulse": {
+            "value": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            "type": "animation"
+        },
+        "bounce": {
+            "value": "bounce 1s infinite",
+            "type": "animation"
+        },
+        "fadeIn": {
+            "value": "fadeIn 0.3s ease-out",
+            "type": "animation"
+        },
+        "slideUp": {
+            "value": "slideUp 0.3s ease-out",
+            "type": "animation"
+        },
+        "slideDown": {
+            "value": "slideDown 0.3s ease-out",
+            "type": "animation"
+        },
+        "scaleIn": {
+            "value": "scaleIn 0.2s ease-out",
+            "type": "animation"
+        },
+        "shimmer": {
+            "value": "shimmer 2s linear infinite",
+            "type": "animation",
+            "comment": "Loading shimmer effect"
+        },
+        "glow-pulse": {
+            "value": "glow-pulse 2s ease-in-out infinite",
+            "type": "animation",
+            "comment": "Pulsing glow for highlights"
+        }
+    },
+    "zIndex": {
+        "$description": "Z-index scale for layering",
+        "behind": {
+            "value": "-1",
+            "type": "zIndex"
+        },
+        "base": {
+            "value": "0",
+            "type": "zIndex"
+        },
+        "raised": {
+            "value": "10",
+            "type": "zIndex"
+        },
+        "dropdown": {
+            "value": "100",
+            "type": "zIndex"
+        },
+        "sticky": {
+            "value": "200",
+            "type": "zIndex"
+        },
+        "overlay": {
+            "value": "300",
+            "type": "zIndex"
+        },
+        "modal": {
+            "value": "400",
+            "type": "zIndex"
+        },
+        "popover": {
+            "value": "500",
+            "type": "zIndex"
+        },
+        "tooltip": {
+            "value": "600",
+            "type": "zIndex"
+        },
+        "toast": {
+            "value": "700",
+            "type": "zIndex"
+        },
+        "max": {
+            "value": "9999",
+            "type": "zIndex"
+        }
+    }
+}

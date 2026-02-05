@@ -1,0 +1,175 @@
+{
+    "fontFamily": {
+        "$description": "Font family definitions with modern system stack",
+        "sans": {
+            "value": "'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            "type": "fontFamily"
+        },
+        "mono": {
+            "value": "'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace",
+            "type": "fontFamily"
+        },
+        "display": {
+            "value": "'Outfit', 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif",
+            "type": "fontFamily"
+        }
+    },
+    "fontSize": {
+        "$description": "Type scale using 1.25 ratio (Major Third)",
+        "xs": {
+            "value": "0.75rem",
+            "type": "fontSize",
+            "comment": "12px"
+        },
+        "sm": {
+            "value": "0.875rem",
+            "type": "fontSize",
+            "comment": "14px"
+        },
+        "base": {
+            "value": "1rem",
+            "type": "fontSize",
+            "comment": "16px"
+        },
+        "lg": {
+            "value": "1.125rem",
+            "type": "fontSize",
+            "comment": "18px"
+        },
+        "xl": {
+            "value": "1.25rem",
+            "type": "fontSize",
+            "comment": "20px"
+        },
+        "2xl": {
+            "value": "1.5rem",
+            "type": "fontSize",
+            "comment": "24px"
+        },
+        "3xl": {
+            "value": "1.875rem",
+            "type": "fontSize",
+            "comment": "30px"
+        },
+        "4xl": {
+            "value": "2.25rem",
+            "type": "fontSize",
+            "comment": "36px"
+        },
+        "5xl": {
+            "value": "3rem",
+            "type": "fontSize",
+            "comment": "48px"
+        },
+        "6xl": {
+            "value": "3.75rem",
+            "type": "fontSize",
+            "comment": "60px"
+        },
+        "7xl": {
+            "value": "4.5rem",
+            "type": "fontSize",
+            "comment": "72px"
+        },
+        "8xl": {
+            "value": "6rem",
+            "type": "fontSize",
+            "comment": "96px"
+        },
+        "9xl": {
+            "value": "8rem",
+            "type": "fontSize",
+            "comment": "128px"
+        }
+    },
+    "fontWeight": {
+        "thin": {
+            "value": "100",
+            "type": "fontWeight"
+        },
+        "extralight": {
+            "value": "200",
+            "type": "fontWeight"
+        },
+        "light": {
+            "value": "300",
+            "type": "fontWeight"
+        },
+        "normal": {
+            "value": "400",
+            "type": "fontWeight"
+        },
+        "medium": {
+            "value": "500",
+            "type": "fontWeight"
+        },
+        "semibold": {
+            "value": "600",
+            "type": "fontWeight"
+        },
+        "bold": {
+            "value": "700",
+            "type": "fontWeight"
+        },
+        "extrabold": {
+            "value": "800",
+            "type": "fontWeight"
+        },
+        "black": {
+            "value": "900",
+            "type": "fontWeight"
+        }
+    },
+    "lineHeight": {
+        "none": {
+            "value": "1",
+            "type": "lineHeight"
+        },
+        "tight": {
+            "value": "1.25",
+            "type": "lineHeight"
+        },
+        "snug": {
+            "value": "1.375",
+            "type": "lineHeight"
+        },
+        "normal": {
+            "value": "1.5",
+            "type": "lineHeight"
+        },
+        "relaxed": {
+            "value": "1.625",
+            "type": "lineHeight"
+        },
+        "loose": {
+            "value": "2",
+            "type": "lineHeight"
+        }
+    },
+    "letterSpacing": {
+        "tighter": {
+            "value": "-0.05em",
+            "type": "letterSpacing"
+        },
+        "tight": {
+            "value": "-0.025em",
+            "type": "letterSpacing"
+        },
+        "normal": {
+            "value": "0em",
+            "type": "letterSpacing"
+        },
+        "wide": {
+            "value": "0.025em",
+            "type": "letterSpacing"
+        },
+        "wider": {
+            "value": "0.05em",
+            "type": "letterSpacing"
+        },
+        "widest": {
+            "value": "0.1em",
+            "type": "letterSpacing"
+        }
+    }
+}

@@ -1,0 +1,127 @@
+/* ============================================
+   Spotlight Component Styles
+   Cursor-following spotlight effect
+   ============================================ */
+
+.spotlight-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity var(--duration-300) var(--ease-default);
+    z-index: var(--z-raised);
+}
+
+.spotlight-container:hover .spotlight {
+    opacity: 1;
+}
+
+/* Sizes */
+.spotlight--sm {
+    width: 200px;
+    height: 200px;
+}
+
+.spotlight--md {
+    width: 400px;
+    height: 400px;
+}
+
+.spotlight--lg {
+    width: 600px;
+    height: 600px;
+}
+
+.spotlight--xl {
+    width: 800px;
+    height: 800px;
+}
+
+/* Color variants */
+.spotlight--primary {
+    background: radial-gradient(circle at center,
+            hsla(250, 75%, 56%, 0.15) 0%,
+            hsla(250, 75%, 56%, 0.05) 40%,
+            transparent 60%);
+}
+
+.spotlight--secondary {
+    background: radial-gradient(circle at center,
+            hsla(185, 75%, 46%, 0.15) 0%,
+            hsla(185, 75%, 46%, 0.05) 40%,
+            transparent 60%);
+}
+
+.spotlight--accent {
+    background: radial-gradient(circle at center,
+            hsla(330, 75%, 54%, 0.15) 0%,
+            hsla(330, 75%, 54%, 0.05) 40%,
+            transparent 60%);
+}
+
+.spotlight--white {
+    background: radial-gradient(circle at center,
+            hsla(0, 0%, 100%, 0.1) 0%,
+            hsla(0, 0%, 100%, 0.03) 40%,
+            transparent 60%);
+}
+
+.spotlight--gradient {
+    background: radial-gradient(circle at center,
+            hsla(250, 75%, 56%, 0.12) 0%,
+            hsla(280, 70%, 52%, 0.08) 30%,
+            hsla(330, 75%, 54%, 0.04) 50%,
+            transparent 60%);
+}
+
+/* Intensity */
+.spotlight--intense {
+    filter: blur(var(--blur-md));
+}
+
+.spotlight--intense.spotlight--primary {
+    background: radial-gradient(circle at center,
+            hsla(250, 75%, 56%, 0.3) 0%,
+            hsla(250, 75%, 56%, 0.1) 40%,
+            transparent 60%);
+}
+
+.spotlight--intense.spotlight--gradient {
+    background: radial-gradient(circle at center,
+            hsla(250, 75%, 56%, 0.25) 0%,
+            hsla(280, 70%, 52%, 0.15) 30%,
+            hsla(330, 75%, 54%, 0.08) 50%,
+            transparent 60%);
+}
+
+/* Border glow effect on container */
+.spotlight-container--border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(800px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+            hsla(250, 75%, 56%, 0.3),
+            transparent 40%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--duration-300) var(--ease-default);
+    pointer-events: none;
+}
+
+.spotlight-container--border:hover::before {
+    opacity: 1;
+}

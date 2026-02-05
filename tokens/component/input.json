@@ -1,0 +1,131 @@
+{
+    "$description": "Input component tokens",
+    "input": {
+        "border-radius": {
+            "value": "{borderRadius.lg}",
+            "type": "borderRadius"
+        },
+        "border-width": {
+            "value": "{borderWidth.default}",
+            "type": "borderWidth"
+        },
+        "size": {
+            "sm": {
+                "height": {
+                    "value": "{spacing.8}",
+                    "type": "sizing"
+                },
+                "padding-x": {
+                    "value": "{spacing.2.5}",
+                    "type": "spacing"
+                },
+                "font-size": {
+                    "value": "{fontSize.sm}",
+                    "type": "fontSize"
+                }
+            },
+            "md": {
+                "height": {
+                    "value": "{spacing.10}",
+                    "type": "sizing"
+                },
+                "padding-x": {
+                    "value": "{spacing.3}",
+                    "type": "spacing"
+                },
+                "font-size": {
+                    "value": "{fontSize.sm}",
+                    "type": "fontSize"
+                }
+            },
+            "lg": {
+                "height": {
+                    "value": "{spacing.12}",
+                    "type": "sizing"
+                },
+                "padding-x": {
+                    "value": "{spacing.4}",
+                    "type": "spacing"
+                },
+                "font-size": {
+                    "value": "{fontSize.base}",
+                    "type": "fontSize"
+                }
+            }
+        },
+        "state": {
+            "default": {
+                "background": {
+                    "value": "{input.background}",
+                    "type": "color"
+                },
+                "border": {
+                    "value": "{input.border}",
+                    "type": "color"
+                },
+                "foreground": {
+                    "value": "{foreground.default}",
+                    "type": "color"
+                },
+                "placeholder": {
+                    "value": "{input.placeholder}",
+                    "type": "color"
+                }
+            },
+            "hover": {
+                "border": {
+                    "value": "{border.emphasis}",
+                    "type": "color"
+                }
+            },
+            "focus": {
+                "border": {
+                    "value": "{input.focus-ring}",
+                    "type": "color"
+                },
+                "ring-width": {
+                    "value": "2px",
+                    "type": "borderWidth"
+                },
+                "ring-offset": {
+                    "value": "2px",
+                    "type": "spacing"
+                }
+            },
+            "disabled": {
+                "background": {
+                    "value": "{background.muted}",
+                    "type": "color"
+                },
+                "foreground": {
+                    "value": "{foreground.muted}",
+                    "type": "color"
+                },
+                "opacity": {
+                    "value": "0.5",
+                    "type": "opacity"
+                }
+            },
+            "error": {
+                "border": {
+                    "value": "{error.background}",
+                    "type": "color"
+                },
+                "focus-ring": {
+                    "value": "{error.background}",
+                    "type": "color"
+                }
+            }
+        },
+        "transition": {
+            "duration": {
+                "value": "{transition.duration.150}",
+                "type": "duration"
+            },
+            "timing": {
+                "value": "{transition.timing.ease}",
+                "type": "timing"
+            }
+        }
+    }
+}

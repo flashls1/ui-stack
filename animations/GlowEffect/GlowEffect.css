@@ -1,0 +1,140 @@
+/* ============================================
+   GlowEffect Component Styles
+   Radial glow behind elements
+   ============================================ */
+
+.glow-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.glow-effect {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(var(--blur-2xl));
+    z-index: var(--z-behind);
+}
+
+/* Positioning */
+.glow-effect--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.glow-effect--top {
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.glow-effect--bottom {
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Sizes */
+.glow-effect--sm {
+    width: 150px;
+    height: 150px;
+}
+
+.glow-effect--md {
+    width: 300px;
+    height: 300px;
+}
+
+.glow-effect--lg {
+    width: 500px;
+    height: 500px;
+}
+
+.glow-effect--xl {
+    width: 800px;
+    height: 800px;
+}
+
+/* Color variants */
+.glow-effect--primary {
+    background: radial-gradient(circle at center,
+            hsla(250, 75%, 56%, 0.5) 0%,
+            hsla(250, 75%, 56%, 0.2) 40%,
+            transparent 70%);
+}
+
+.glow-effect--secondary {
+    background: radial-gradient(circle at center,
+            hsla(185, 75%, 46%, 0.5) 0%,
+            hsla(185, 75%, 46%, 0.2) 40%,
+            transparent 70%);
+}
+
+.glow-effect--accent {
+    background: radial-gradient(circle at center,
+            hsla(330, 75%, 54%, 0.5) 0%,
+            hsla(330, 75%, 54%, 0.2) 40%,
+            transparent 70%);
+}
+
+.glow-effect--multi {
+    background: radial-gradient(circle at center,
+            hsla(250, 75%, 56%, 0.4) 0%,
+            hsla(280, 70%, 52%, 0.3) 30%,
+            hsla(330, 75%, 54%, 0.2) 50%,
+            transparent 70%);
+}
+
+.glow-effect--white {
+    background: radial-gradient(circle at center,
+            hsla(0, 0%, 100%, 0.3) 0%,
+            hsla(0, 0%, 100%, 0.1) 40%,
+            transparent 70%);
+}
+
+/* Animations */
+.glow-effect--pulse {
+    animation: glow-pulse-size 3s ease-in-out infinite;
+}
+
+.glow-effect--breathe {
+    animation: glow-breathe 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse-size {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes glow-breathe {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+/* Intensity */
+.glow-effect--intense {
+    filter: blur(var(--blur-xl));
+    opacity: 1;
+}
+
+.glow-effect--subtle {
+    filter: blur(var(--blur-3xl));
+    opacity: 0.5;
+}

@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./*"
+            ],
+            "@components/*": [
+                "./components/*"
+            ],
+            "@animations/*": [
+                "./animations/*"
+            ],
+            "@patterns/*": [
+                "./patterns/*"
+            ],
+            "@react-bits/*": [
+                "./react-bits/*"
+            ],
+            "@tokens/*": [
+                "./tokens/*"
+            ]
+        }
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

@@ -1,0 +1,22 @@
+/* SplitText Component Styles */
+
+.split-text {
+    display: inline;
+}
+
+.split-text__element {
+    display: inline-block;
+    will-change: transform, opacity;
+}
+
+.split-text__char {
+    white-space: pre;
+}
+
+.split-text__word {
+    white-space: nowrap;
+}
+
+.split-text__line {
+    display: block;
+}

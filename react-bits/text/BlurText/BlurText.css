@@ -1,0 +1,10 @@
+/* BlurText Component Styles */
+
+.blur-text {
+    display: inline;
+}
+
+.blur-text__word {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+}
